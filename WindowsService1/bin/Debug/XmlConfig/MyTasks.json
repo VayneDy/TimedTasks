@@ -1,0 +1,41 @@
+[
+  //定时任务配置项完整属性解释：
+  //{
+  //  "AssemblyName": "MyTask_TRJBC.dll", //程序集名称，必填
+  //  "ClassName": "MyTask_TRJBC.TaskAct_Report_BaseData", //类的完全限定名，命名空间.类名，必填
+  //  "ModelName": "基础数据统计", //任务模块名称，用于写日志，方便查看是那个业务类输出的日志
+  //  "ExcuteType": "1", //  执行类型，必填；1：每天在StartTime定时执行一次；2：大于StartTime开始无限循环执行；3：每天在StartTime到EndTime时间段内循环执行；4: 每月执行一次
+  //  "ExcuteDayPerMonth": "1", //每月几号执行，ExcuteType=4时必填
+  //  "StartTime": "01:01", //开始执行时间 HH:mm ，时:分 ，必填
+  //  "EndTime": "12:05", //结束执行时间 HH:mm ，时:分 ，ExcuteType=3时必填
+  //  "Interval": "10", //循环执行时的循环间隔，整数,ExcuteType=2或者3时必填，如果不填，默认=5
+  //  "IntervalType": "m", //循环执行时的循环间隔的单位, h：小时，m : 分钟, s : 秒，ExcuteType=2或者3时必填，如果不填，默认=m
+  //  "Enabled": "Y" //是否启用，Y：是，N：否
+  //},
+
+
+
+  //定时任务，消耗统计
+  {
+    "AssemblyName": "MyTask_LB.dll",
+    "ClassName": "MyTask_LB.TaskAct_Report_Consumption",
+    "ModelName": "消耗统计",
+    "ExcuteType": "2",
+    "StartTime": "01:02",
+    "Interval": "5",
+    "IntervalType": "s",
+    "Enabled": "Y"
+  },
+  //定时任务，用户统计
+  {
+    "AssemblyName": "MyTask_LB.dll",
+    "ClassName": "MyTask_LB.TaskAct_Report_User",
+    "ModelName": "用户统计",
+    "ExcuteType": "2",
+    "StartTime": "01:03",
+    "Interval": "5",
+    "IntervalType": "s",
+    "Enabled": "Y"
+  }
+
+]
