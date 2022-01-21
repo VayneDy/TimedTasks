@@ -9,7 +9,7 @@ It supports daily timing execution, monthly timing execution, timing loop execut
 
 #### Instructions for use
 
-1. WindowsService1 is a blank service program used to create Windows services. You only need to modify the three attributes of service name, display name and description. This attribute will not be changed. You can refer to this: https://www.cnblogs.com/v-dai/p/15829479.html
+1. WindowsService1 is a blank service program used to create Windows services. You only need to modify the three attributes of service name, display name and description. If you do not know how to change, you can refer to this: https://www.cnblogs.com/v-dai/p/15829479.html
 
 There is a service installer.exe under WindowsService1\bin\Debug, you can use this installation service, select WindowsService1.exe for the installation path, fill in your custom service name for the service name, and click Install.
 
