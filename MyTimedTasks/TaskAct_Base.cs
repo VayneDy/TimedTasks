@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MyTimedTasks
 {
     /// <summary>
-    /// 任务执行器
+    /// 定时任务基类，添加业务逻辑任务类后继承此类
     /// </summary>
     public class TaskAct_Base
     {
@@ -167,13 +167,16 @@ namespace MyTimedTasks
                 log.Info($"定时任务,{ModelName},执行失败");
             }
         }
-        //执行具体任务
+        
+        /// <summary>
+        /// 执行具体任务，子类重写此方法，写具体业务逻辑
+        /// </summary>
         protected virtual void Do()
         {
 
         }
 
-        //记录日志，子类直接用父类的记日志方法，不用再实例化log4net的log对象
+        //记录日志，子类直接用父类的记日志方法，不用再实例化log4net对象
         protected void LogInfo(string msg)
         {
             log.Info($"{ModelName},{msg}");

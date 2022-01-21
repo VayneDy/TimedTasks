@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace MyTimedTasks
 {
     /// <summary>
-    /// 任务管理器
+    /// 定时任务执行入口，用法：MyTaskFactory.Instence().Start();
     /// </summary>
     public class MyTaskFactory
     {
@@ -24,7 +24,6 @@ namespace MyTimedTasks
         {
             try
             {
-                //if (!System.IO.File.Exists(LogSvs.FilePath)) System.IO.File.Create(LogSvs.FilePath);
                 log.Info("开始读取定时任务配置文件");
                 string path = CommonFn.GetRootDir() + "/XmlConfig/MyTasks.json";
                 string json = File.ReadAllText(path, Encoding.Default);
