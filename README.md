@@ -8,7 +8,7 @@ WindowsService定时任务模板
 
 
 #### 使用说明
-项目结构：
+
 1. WindowsService1 是空白服务程序，用来创建Windows服务用的，你只需要修改服务名称、显示名称、描述3个属性即可，这个属性不会改的可以参考这个：https://www.cnblogs.com/v-dai/p/15829479.html
 
 WindowsService1\bin\Debug下有一个 服务安装程序.exe，可以用这个安装服务，安装路径选择WindowsService1.exe，服务名称填你自定义的服务名称，点安装就行。
